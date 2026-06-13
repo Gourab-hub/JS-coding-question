@@ -68,7 +68,8 @@ const charCountMap = name
     }, {});
 
 console.log(charCountMap);
-/* OUTPUT:
+```
+OUTPUT:
 {
   g: 1,
   o: 1,
@@ -80,6 +81,20 @@ console.log(charCountMap);
   i: 1,
   k: 1
 }
+
+
+4. Sort distinct number using JS
+```javascript
+const arr = [5, 3, 1, 2, 3, 5, 4, 2];
+
+// 1. Remove duplicates using a Set, then spread into a new array
+// 2. Sort numerically using a comparator function
+const result = [...new Set(arr)].sort((a, b) => a - b);
+
+console.log("Sorted Distinct Numbers:");
+console.log(result);
+/* OUTPUT:
+Sorted Distinct Numbers:
+[ 1, 2, 3, 4, 5 ]
 */
 ```
-
