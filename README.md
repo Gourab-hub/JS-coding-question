@@ -51,3 +51,35 @@ console.log(firstNonRepeating("programming"));
 /* OUTPUT:
 'p'
 */
+
+3. count character frequency from a string using JS
+
+
+```javascript
+const name = "Gourab Banik";
+
+const charCountMap = name
+    .split(" ")                            // Split by space -> ["Gourab", "Banik"]
+    .map(word => word.toLowerCase())       // Lowercase each word -> ["gourab", "banik"]
+    .flatMap(word => word.split(""))       // Flatten to characters -> ['g', 'o', 'u', 'r', 'a', 'b', 'b', 'a', 'n', 'i', 'k']
+    .reduce((acc, c) => {                  // GroupingBy and counting equivalent
+        acc[c] = (acc[c] || 0) + 1;
+        return acc;
+    }, {});
+
+console.log(charCountMap);
+/* OUTPUT:
+{
+  g: 1,
+  o: 1,
+  u: 1,
+  r: 1,
+  a: 2,
+  b: 2,
+  n: 1,
+  i: 1,
+  k: 1
+}
+*/
+```
+
